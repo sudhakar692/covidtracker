@@ -2,10 +2,12 @@ import React from 'react';
 import CovidTable from './covidtable';
 import './App.css';
 
+
 function App() {
   return (
     <div className="App">
-     <CovidTable />
+      <CovidTable />
+     
     </div>
   );
 }

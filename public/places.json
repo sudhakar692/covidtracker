@@ -1,0 +1,387 @@
+{
+	"html_attributions": [],
+	"next_page_token": "CpQCDwEAAJwdqLU_q4CMC9j-DOFIiwmwpP8ICAF_lHHKpWrNLfYsLS0hubKFTbau5sp7Tc_vC2bftXqZSRfq4uMk34-nE1f3weBRv77ZvsUhQn1MvJCfW6pNFA6zrDP_lPLBQZVrGVePIGhW8g485WnZdAHUyKpr4jjJ6hiOh2R6MxVBTYHyRuy5mDa-NGx4zQXDsHGSejOPH6BmPUoyfb-2MmRo1kcYABkBZRAaXpDmTtoXLmX8GxELbMOOAjEJ8Vzxdk-4GQkzoDYB1YwHBR1JXzxlawX0DdUyaJKjLWGjvt8GOwF8d9KVTF0r528jDCheFjvRgxOGMeYq1IrUx9lBofHH4sAX2plD6BGumN40mdBkDKVMEhC8pyLxL6t51mflBEc_WkF6GhTsH0kHwldrZYDnyUZ78TU9zeiiqg",
+	"results": [
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "32.084206",
+			  "lng": "77.571167"
+			}
+		  },
+		  "name": "Himachal Pradesh, India",
+		  "id": "HimachalPradeshIndia"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "11.740087",
+			  "lng": "92.65864"
+			}
+		  },
+		  "name": "Andaman and Nicobar Islands",
+		  "id": "AndamanAndNicobar"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "14.7504291",
+			  "lng": "78.57002559"
+			}
+		  },
+		  "name": "Andhra Pradesh",
+		  "id": "AndhraPradesh"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "27.10039878",
+			  "lng": "93.61660071"
+			}
+		  },
+		  "name": "Arunachal Pradesh",
+		  "id": "ArunachalPradesh"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "26.200604",
+			  "lng": "92.937574"
+			}
+		  },
+		  "name": "Assam",
+		  "id": "Assam"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "25.78541445",
+			  "lng": "87.4799727"
+			}
+		  },
+		  "name": "Bihar",
+		  "id": "Bihar"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "30.71999697",
+			  "lng": "76.78000565"
+			}
+		  },
+		  "name": "Chandigarh",
+		  "id": "Chandigarh"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "22.09042035",
+			  "lng": "82.15998734"
+			}
+		  },
+		  "name": "Chhattisgarh",
+		  "id": "Chhattisgarh"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "20.26657819",
+			  "lng": "73.0166178"
+			}
+		  },
+		  "name": "Dadra and Nagar Haveli and Daman and Diu",
+		  "id": "DadraAndNagarHaveli"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "28.6699929",
+			  "lng": "77.23000403"
+			}
+		  },
+		  "name": "Delhi",
+		  "id": "Delhi"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "15.491997",
+			  "lng": "73.81800065"
+			}
+		  },
+		  "name": "Goa",
+		  "id": "Goa"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "28.45000633",
+			  "lng": "77.01999101"
+			}
+		  },
+		  "name": "Haryana",
+		  "id": "Haryana"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "31.10002545",
+			  "lng": "77.16659704"
+			}
+		  },
+		  "name": "Himachal Pradesh",
+		  "id": "HimachalPradesh"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "34.29995933",
+			  "lng": "74.46665849"
+			}
+		  },
+		  "name": "Jammu And Kashmir",
+		  "id": "JammuAndKashmir"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "23.80039349",
+			  "lng": "86.41998572"
+			}
+		  },
+		  "name": "Jharkhand",
+		  "id": "Jharkhand"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "12.57038129",
+			  "lng": "76.91999711"
+			}
+		  },
+		  "name": "Karnataka",
+		  "id": "Karnataka"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "10.850516",
+			  "lng": "76.271083"
+			}
+		  },
+		  "name": "Kerala",
+		  "id": "Kerala"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "10.328027",
+			  "lng": "72.784634"
+			}
+		  },
+		  "name": "Lakshadweep",
+		  "id": "Lakshadweep"
+		},
+		{
+			"geometry": {
+			  "location": {
+				"lat": "34.299618",
+				"lng": "78.293171"
+			  }
+			},
+			"name": "Ladakh",
+			"id": "Ladakh"
+		  },
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "21.30039105",
+			  "lng": "76.13001949"
+			}
+		  },
+		  "name": "Madhya Pradesh",
+		  "id": "MadhyaPradesh"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "19.25023195",
+			  "lng": "73.16017493"
+			}
+		  },
+		  "name": "Maharashtra",
+		  "id": "Maharashtra"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "24.79997072",
+			  "lng": "93.95001705"
+			}
+		  },
+		  "name": "Manipur",
+		  "id": "Manipur"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "25.57049217",
+			  "lng": "91.8800142"
+			}
+		  },
+		  "name": "Meghalaya",
+		  "id": "Meghalaya"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "23.71039899",
+			  "lng": "92.72001461"
+			}
+		  },
+		  "name": "Mizoram",
+		  "id": "Mizoram"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "26.158435",
+			  "lng": "94.562443"
+			}
+		  },
+		  "name": "Nagaland",
+		  "id": "Nagaland"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "20.951666",
+			  "lng": "85.098524"
+			}
+		  },
+		  "name": "Odisha",
+		  "id": "Odisha"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "11.93499371",
+			  "lng": "79.83000037"
+			}
+		  },
+		  "name": "Puducherry",
+		  "id": "Puducherry"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "31.51997398",
+			  "lng": "75.98000281"
+			}
+		  },
+		  "name": "Punjab",
+		  "id": "Punjab"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "26.44999921",
+			  "lng": "74.63998124"
+			}
+		  },
+		  "name": "Rajasthan",
+		  "id": "Rajasthan"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "27.3333303",
+			  "lng": "88.6166475"
+			}
+		  },
+		  "name": "Sikkim",
+		  "id": "Sikkim"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "12.92038576",
+			  "lng": "79.15004187"
+			}
+		  },
+		  "name": "Tamil Nadu",
+		  "id": "TamilNadu"
+		},
+		{
+			"geometry": {
+			  "location": {
+				"lat": "18.112437",
+				"lng": "79.0193"
+			  }
+			},
+			"name": "Telangana",
+			"id": "Telangana"
+		  },
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "23.83540428",
+			  "lng": "91.27999914"
+			}
+		  },
+		  "name": "Tripura",
+		  "id": "Tripura"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "27.59998069",
+			  "lng": "78.05000565"
+			}
+		  },
+		  "name": "Uttar Pradesh",
+		  "id": "UttarPradesh"
+		},
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "30.32040895",
+			  "lng": "78.05000565"
+			}
+		  },
+		  "name": "Uttaranchal",
+		  "id": "Uttaranchal"
+		},
+		{
+			"geometry": {
+			  "location": {
+				"lat": "30.066753",
+				"lng": "79.0193"
+			  }
+			},
+			"name": "Uttarakhand",
+			"id": "Uttarakhand"
+		  },
+		{
+		  "geometry": {
+			"location": {
+			  "lat": "22.58039044",
+			  "lng": "88.32994665"
+			}
+		  },
+		  "name": "West Bengal",
+		  "id": "WestBengal"
+		},
+		{
+			"geometry": {
+			  "location": {
+				"lat": "22.258652",
+				"lng": "71.192381"
+			  }
+			},
+			"name": "Gujarat",
+			"id": "gujarat"
+		  }
+	  ],
+	"status": "OK"
+}

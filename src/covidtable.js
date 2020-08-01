@@ -1,7 +1,11 @@
 import React from 'react';
 import TableView from './tableview';
-import MapView from './mapview';
 import StateWiseTableView from './statetableview';
+import MarkerInfoWindow from './infomap';
+import {postFetch} from './api';
+import isEmpty from 'lodash.isempty';
+import config from './config';
+
 export default class CovidTable extends React.Component{
 	constructor(props){
 		super(props);
@@ -9,7 +13,7 @@ export default class CovidTable extends React.Component{
 		this.state = {
 			'data':null,
 			'selectedState': '',
-			'stateWiseSortedData': []
+			'places': []
 		}
 		this.handleLocationChange = this.handleLocationChange.bind(this);
 		this.prepareStateWiseData = this.prepareStateWiseData.bind(this);
@@ -28,47 +32,51 @@ export default class CovidTable extends React.Component{
 	}
 
 	prepareStateWiseData(data){
-			let stateWiseSortedData = [];
-			
+			let places = this.state.places;
 			Object.keys(data).map((stateName,index) =>{
-				stateWiseSortedData[index] ={   'name': stateName, 
-												'active': 0,
-												'recovered': 0,
-												'deceased': 0,
-												'confirmed': 0
-											};
-				Object.keys(data[stateName]['districtData']).map((disName) =>{
-					stateWiseSortedData[index]['active'] += Math.abs(parseInt(data[stateName]['districtData'][disName]['active']));	
-					stateWiseSortedData[index]['recovered'] += Math.abs(parseInt(data[stateName]['districtData'][disName]['recovered']));	
-					stateWiseSortedData[index]['deceased'] += Math.abs(parseInt(data[stateName]['districtData'][disName]['deceased']));	
-					stateWiseSortedData[index]['confirmed'] += Math.abs(parseInt(data[stateName]['districtData'][disName]['confirmed']));	
-				})
+				let stateData = places.find(place=> place.name.toLowerCase() === stateName.toLowerCase())
+				if(!isEmpty(stateData)){
+					Object.keys(data[stateName]['districtData']).map((disName) =>{
+						stateData['active'] += Math.abs(parseInt(data[stateName]['districtData'][disName]['active']));	
+						stateData['recovered'] += Math.abs(parseInt(data[stateName]['districtData'][disName]['recovered']));	
+						stateData['deceased'] += Math.abs(parseInt(data[stateName]['districtData'][disName]['deceased']));	
+						stateData['confirmed'] += Math.abs(parseInt(data[stateName]['districtData'][disName]['confirmed']));	
+					})
+				}
+				
 				
 			})
-			stateWiseSortedData.sort(this.sortDescActive);
+			places.sort(this.sortDescActive);
+
 			this.setState({
-				stateWiseSortedData
+				places
 			})
+			
 	}
 	
 	componentDidMount(){
-		fetch("https://api.covid19india.org/state_district_wise.json")
-		.then(res => {
-			if (!res.ok) {
-				// console.log("An error")
-				// console.log(res);
-				throw new Error("An error occurred")
-			}
-			return res.json()
-		})
-		.then(data=>{
-			this.prepareStateWiseData(data);
-			this.setState({
-				'data':data
+		postFetch(config.HOMEPAGE_URL+"/places.json")
+		.then((data) => {
+			data.results.forEach((result) => {
+			  result.show = false; // eslint-disable-line no-param-reassign
+			  result.active =0;
+			  result.recovered =0;
+			  result.deceased =0;
+			  result.confirmed = 0;
 			});
-			// console.log(data);
-			return data;
-		})
+			this.setState({ places: data.results });
+		  }).then(()=>{
+			postFetch("https://api.covid19india.org/state_district_wise.json")
+			.then(data=>{
+				this.prepareStateWiseData(data);
+				this.setState({
+					'data':data
+				});
+			})
+		  })
+  
+
+		
 	}
 
 
@@ -77,10 +85,9 @@ export default class CovidTable extends React.Component{
 		return (
 			<React.Fragment>
 				<div className="row">
-					<div className="col-sm-12">
+					<div className="col-sm-12 col-md-8 col-lg-6">
 						Total Cases
-					</div>
-					<div className="col-sm-8">
+					
 						<select className="form-control" name="location" onChange={(e)=> this.handleLocationChange(e.target.value)}>
 							<option>Choose State</option>
 						{data && Object.keys(data).map((key,index) => {
@@ -91,7 +98,7 @@ export default class CovidTable extends React.Component{
 					</div>
 				</div>
 				<div className="row">
-					<div className="col-sm-12 col-md-8 col-lg-8">
+					<div className="col-sm-12 col-md-8 col-lg-6">
 						{this.state.selectedState ?
 						<TableView 
 							data={data} 
@@ -99,19 +106,16 @@ export default class CovidTable extends React.Component{
 							back={this.handleLocationChange}
 						/>:
 						<StateWiseTableView 
-							data={this.state.stateWiseSortedData} 
+							data={this.state.places} 
 							viewMore={this.handleLocationChange}
 						/>
 						}
 
 					</div>
-					<div className="col-sm-12 col-md-4 col-lg-4">
-						<MapView 
-							data={data} 
-							isMarkerShown={true}
+					<div className="col-sm-12 col-md-4 col-lg-6">
+						<MarkerInfoWindow 
 							selectedState={this.state.selectedState}
-							stateWiseSortedData={this.stateWiseSortedData}
-						/>
+							places={this.state.places}/>
 					</div>
 				</div>
 			</React.Fragment>

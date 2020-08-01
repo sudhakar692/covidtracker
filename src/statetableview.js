@@ -8,9 +8,8 @@ export default class TableView extends React.Component {
     }
 
     renderRow(stateData){
-        console.log("i am called")
-        return(<tr>
-            <td ><a href="#" onClick={()=>this.props.viewMore(stateData['name'])}>{stateData['name']}</a></td>
+        return(<tr key={stateData['name']}>
+            <td ><a href='#' onClick={()=>this.props.viewMore(stateData['name'])}>{stateData['name']}</a></td>
             <td >{stateData['active']}</td>
             <td >{stateData['recovered']}</td>
             <td >{stateData['deceased']}</td>
@@ -25,7 +24,6 @@ export default class TableView extends React.Component {
 
     render(){
         let data = this.props.data;
-        // console.log(this.props.data, 'state wise data')
         return(
             <React.Fragment>
                 <table className="table table-striped table-bordered table-responsive">

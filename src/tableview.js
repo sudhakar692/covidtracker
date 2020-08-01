@@ -13,7 +13,7 @@ export default class TableView extends React.Component {
     }
 
     renderRow(key, data){
-        return(<tr>
+        return(<tr key={key}>
             <td>{key}</td>
             <td>{data['active']}</td>
             <td>{data['recovered']}</td>
@@ -22,25 +22,14 @@ export default class TableView extends React.Component {
         </tr>);
     }
     renderTable(data){
-        let active = 0, deaths = 0, confirmed = 0;
+        
         let state = this.props.selectedState;
 		return Object.keys(data).map((key,index) => {
                 if(state && state !== key){ 
                     return null;
                 }
-                // console.log(data[key], index);
                 let districtData = data[key]['districtData'];
-                return Object.keys(districtData).map((districtName, index) => {
-                    active += districtData[districtName]['active'];
-                    confirmed += districtData[districtName]['confirmed'];
-                    deaths += districtData[districtName]['deceased'];
-                    console.log(active, deaths, confirmed)
-                    // this.setState({
-                    //     active,
-                    //     deaths,
-                    //     confirmed
-                    // })
-                    // console.log(districtData, districtData[districtName], "printing district")
+                return Object.keys(districtData).map((districtName, index) => {                  
                     return this.renderRow(districtName, districtData[districtName]);
                 })
                 
@@ -63,7 +52,7 @@ export default class TableView extends React.Component {
         let data = this.props.data;
         return(
             <React.Fragment>
-                <a href="#" className="btn btn-primary" onClick={(e)=>this.props.back('')}>Back to view state wise data</a>
+                <button className="btn btn-primary" onClick={(e)=>this.props.back('')}>Back to view state wise data</button>
                 <table className="table table-striped table-bordered table-responsive">
                     <thead>
                         <tr>
